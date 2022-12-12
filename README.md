@@ -1,12 +1,16 @@
-# MasterProject
-MS Computer Science Final Project at CSU San Marcos
-
+# MS Computer Science Final Project at CSU San Marcos
 
 Long-Term Carpool Matching by Preferences for the CSUSM Comnunity
 
+
 ## Data Analysis
 
-Using Google Colab, extract students data from Spring/22 class enrollemnt data 
+Google Colab:
+
+- Extract students data from Spring/22 class enrollemnt data.
+
+- Create functions and graphs, test the carpool program flow
+
 
 ## Carpool Automated Tool
 
