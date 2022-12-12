@@ -14,4 +14,6 @@ Google Colab:
 
 ## Carpool Automated Tool
 
-Program written in Python using VS Code. Requirements.txt has all dependencies
+Program written in Python using VS Code, the file 'requirements.txt' has all dependencies
+
+PS: Base graph file was too big to upload. Create it using the google colab and save it into carpool/project/media to run program
