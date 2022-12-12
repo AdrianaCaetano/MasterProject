@@ -1,0 +1,12 @@
+{% comment %} Atempt to create a file upload inside Admin {% endcomment %}
+
+{% extends "admin/change_list.html" %}
+{% load static %}
+
+{% block content %}
+    <h1>Hello World</h1>
+    <a href='upload_csv/'>Upload a csv file<a>
+
+    {{ block.super }}    
+{% endblock %}
+

@@ -1,0 +1,15 @@
+{% comment %} Atempt to create a file upload inside Admin {% endcomment %}
+
+{% extends "admin/base.html" %}
+
+{% block content %}
+<div>Hello World
+    <form action= '.' method= 'POST' enctype= 'multipart/form-data'>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type='submit'>Upload File</button>
+
+    </form>
+</div>
+
+{% endblock %}
