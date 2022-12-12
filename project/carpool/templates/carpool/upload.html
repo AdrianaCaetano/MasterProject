@@ -1,0 +1,58 @@
+{% extends 'carpool/base.html' %}
+
+{% block title %}
+Home
+{% endblock%}
+
+{% block content %}
+    <h2>CSUSM Carpool</h2> 
+    <h3>Upload CSV File</h3>
+    <p>Upload a new file with carpool candidates. 
+        This action will reset all carpools and may take a few minutes, 
+        please wait for the 'carpool created' message.</p>
+
+    <form method= "post" enctype= "multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name= "document">
+        <button type="submit">Upload File</button>
+    </form>
+    {% if url %}
+        <p>New carpools created.</p>
+        <p>Uploaded file: <a href= "{{ url }}">{{ url }}</a></p>
+    {% endif %}
+
+    <p><b>Instructions:</b></p>
+    <ul>
+        <li>File Format: <b>.csv</b></li>
+        <li>Fields Order and Description:</li>
+        <ul>  
+            <li><b>id:</b> student's id, must be unique</li>
+            <li><b>zip_code:</b> 5 digits zip code of student's residence</li>
+            <li><b>role:</b> D, E, or P - for Driver, Either, or Passenger</li>
+            <li><b>seats:</b> number of available seats in the vehicle</li>
+            <li><b>gender:</b> F, M, or N - for Female, Male, or Non-binary</li>
+            <li><b>under_25:</b> 0 for False, 1 for True - Is student age group under 25 years?</li>
+            <li><b>undergrad:</b> 0 for False, 1 for True - Is student academic level undergraduate? </li>
+            <li><b>smoker:</b> 0 for False, 1 for True - Is student a smoker?</li>
+            <li><b>college:</b> COBA, CSTEM, CEHHS, CHABSS, UNDECLARED - Which college is student enrolled to?</li>
+            <li><b>pref_gender:</b> 0 for False, 1 for True - Does the student prefer to ride with people of the same gender?</li>
+            <li><b>pref_age:</b> 0 for False, 1 for True - Does the student prefer to ride with people of the same age group?</li>
+            <li><b>pref_status:</b> 0 for False, 1 for True - Does the student prefer to ride with people of the same academic level group?</li>
+            <li><b>pref_nonsmoker:</b> 0 for False, 1 for True - Does the student prefer to ride with non-smoker people?</li>
+            <li><b>M_arr:</b> Monday time of arrival in campus using 24h format from 7:00 to 22:00</li>
+            <li><b>M_dep:</b> Monday departure time from campus using 24h format from 7:00 to 22:00</li>
+            <li><b>T_arr:</b> Tuesday time of arrival in campus using 24h format from 7:00 to 22:00</li>
+            <li><b>T_dep:</b> Tuesday departure time from campus using 24h format from 7:00 to 22:00</li>
+            <li><b>W_arr:</b> Wednesday time of arrival in campus using 24h format from 7:00 to 22:00</li>
+            <li><b>W_dep:</b> Wednesday departure time from campus using 24h format from 7:00 to 22:00</li>
+            <li><b>R_arr:</b> Thursday time of arrival in campus using 24h format from 7:00 to 22:00</li>
+            <li><b>R_dep:</b> Thursday departure time from campus using 24h format from 7:00 to 22:00</li>
+            <li><b>F_arr:</b> Friday time of arrival in campus using 24h format from 7:00 to 22:00</li>
+            <li><b>F_dep:</b> Friday departure time from campus using 24h format from 7:00 to 22:00</li>
+            <li><b>S_arr:</b> Saturday time of arrival in campus using 24h format from 7:00 to 22:00</li>
+            <li><b>S_dep:</b> Saturday departure time from campus using 24h format from 7:00 to 22:00</li>
+        </ul>
+    </ul>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'carpool/base.html' %}
+
+{% block title %}
+Carpool Index Information
+{% endblock%}
+
+{% block content %}
+    <h2>CSUSM Carpool</h2>
+    <h3>Carpool Index Information</h3>  
+    <p>To check details of a carpool, click on its index. Last updated on {{  last_update | date:"l, d F, Y" }} at {{ last_update | time:"H:i:s" }}</p>
+
+    <table  class = "carpool_list">
+        <thead>
+            <tr>
+                <th>Carpool</th>
+                <th>Driver</th>
+                <th>Passengers</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for carpool in carpool_list %}
+            <tr>
+                <td><a href= "{% url 'details' carpool.carpool_id %}" class="navbar-item">{{carpool.carpool_id}}</a></td>
+                <td>{{ carpool.driver_id }}</td>
+                <td>{{carpool.passenger_1}},     {{carpool.passenger_2}},     {{carpool.passenger_3}}</td> 
+            </tr> 
+            {% empty %} 
+                <p>There are no carpools.</p>
+            {% endfor %}
+        </tbody>
+
+        {% comment %} <p>Last update {{ carpool_creation | date:"l, d F, Y" }} at {{ carpool_creation | time:"H:i:s" }}</p>  {% endcomment %}
+{% endblock %}
+
+{% comment %} Driver: {{ carpool.driver_id }} Passenger(s): {{carpool.passenger_1}} {{carpool.passenger_2}} {{carpool.passenger_3}} {% endcomment %}

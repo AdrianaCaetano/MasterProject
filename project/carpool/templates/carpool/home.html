@@ -1,0 +1,21 @@
+{% extends 'carpool/base.html' %}
+
+{% block title %}
+Home
+{% endblock%}
+
+{% block content %}
+    <h2>CSUSM Carpool</h2>
+    
+    {% load tz %}
+    {% timezone "America/Los_Angeles" %}
+    <p>Today is {{ date | date:"l, d F, Y" }} at {{ date | time:"H:i" }} </p>
+    <p>This is the webportal of the CSUSM Carpool Program for the Parking Services Department.</p>
+    <p>Instructions:</p>
+    <ul>
+        <li>To check carpools, go to Carpool Index</li>
+        <li>To upload a new file, go to 'Upload Candidates File' tab. This will reset all carpool information.</li>
+        <li>To download a file with all carpool information, go to 'Download Carpool File' tab.</li>
+    </ul>
+    {% endtimezone %}
+{% endblock %}

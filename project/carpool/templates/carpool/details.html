@@ -1,0 +1,37 @@
+{% extends 'carpool/base.html' %}
+
+{% block title %}
+Carpool Detail
+{% endblock%}
+
+{% block content %}
+    <h2>CSUSM Carpool</h2>
+    <h3>Carpool {{ carpool.carpool_id }} Details</h3> 
+    <ul>
+        <li>Zip-Code Origin: {{ driver.zip_code }}</li>
+        <li>Seats: {{ driver.seats }}</li>
+        <li>Driver ID: {{ driver.id }}</li>
+        <li>Passenger(s):</li>
+        <ul>
+            {% comment %} {% if carpool.passenger_1 %} {% endcomment %}
+            <li>ID: {{carpool.passenger_1}}, Score: {{carpool.score_1}}, Schedule: {{carpool.schedule_1}}</li>
+            {% comment %} {% endif %} {% endcomment %}
+            {% comment %} {% if carpoll.passenger_2 != Null %}  {% endcomment %}
+            <li>ID: {{carpool.passenger_2}}, Score: {{carpool.score_2}}, Schedule: {{carpool.schedule_2}}</li>
+            {% comment %} {% endif %}
+            {% if carpoll.passenger_3 != Null %}  {% endcomment %}
+            <li>ID: {{carpool.passenger_3}}, Score: {{carpool.score_3}}, Schedule: {{carpool.schedule_3}}</li>
+            {% comment %} {% endif %} {% endcomment %}
+        </ul>
+        <li>Suggested meeting points:</li>
+            {% for pr in parkride_list %}
+            <ul>
+                <li>{{pr}}</li>
+            </ul>
+            {% empty %}
+            <ul>
+                <li>Sorry, there are no Park and Ride locations around.</li>
+            </ul> 
+            {% endfor%}
+    </ul>
+{% endblock %}
