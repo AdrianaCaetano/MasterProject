@@ -16,4 +16,4 @@ Google Colab:
 
 Program written in Python using VS Code, the file 'requirements.txt' has all dependencies
 
-PS: Base graph file was too big to upload. Create it using the google colab and save it into project/media to run the program
+PS: Base graph file was too big to upload. Create it using the google colab notbeook and save it into project/media to run the program
