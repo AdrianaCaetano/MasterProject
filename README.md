@@ -1,4 +1,4 @@
-# Long-Term Carpool Matching by Preferences for the CSUSM Comnunity
+# Long-Term Carpool Matching by Preferences for the CSUSM Community
 ####  MS Computer Science Final Project at California State University - San Marcos
 
 ## Carpool Automated Tool
