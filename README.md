@@ -86,8 +86,11 @@ Pre-processed routes are created using Open Street Map and saved into the databa
 3. Find candidates around this location
 4. Compute the compatibility score
 5. Select higher score candidates to fill up the seats
-6a. If there are available seats, go to the next location and repeat the process from # 3
-6b. Else, save the carpool, and select another driver to restart the process 
+6. Check number of seats
+
+   6a. If there are available seats, go to the next location and repeat the process from # 3
+  
+   6b. Else, save the carpool, and select another driver to restart the process 
 
 ### Results
 
