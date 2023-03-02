@@ -41,6 +41,8 @@ Although students residency are scattered all over the country and the world, ov
 
 ![Students in CA by county](images/student_location_CA_county.png)
 
+Student Count by Zip Code
+
 ![Students in CA by zip code](images/student_location_CA_zip.png)
 
 ![Students location radius from campus](images/radius_from_campus.png)
@@ -50,7 +52,7 @@ Although students residency are scattered all over the country and the world, ov
 
 ### Requirements
 
-What information we need to build the carpools?
+What information do we need to build the carpools?
 
 Constraints: 
 - Student location (zip code)
